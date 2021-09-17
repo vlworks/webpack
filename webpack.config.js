@@ -13,6 +13,17 @@ const optionPlugins = [
         {
             host: 'localhost',
             port: 3000,
+            files: [
+                {
+                    match: ["./**/*.php"],
+                    fn: function (event, file) {
+                        if (event === 'change') {
+                            const bs = require('browser-sync').get('bs-webpack-plugin');
+                            bs.reload();
+                        }
+                    }
+                }
+            ],
             ...(localDomain && {proxy: localDomain}),
             ...(!localDomain && {server: { baseDir: ['dist']}}),
         },

@@ -1,5 +1,7 @@
 body {
   font-size: 18px;
+  margin: 0;
+  padding: 0;
   & .content {
     width: 250px;
     margin: 2rem auto;
@@ -8,5 +10,10 @@ body {
     border-radius: 10px;
     background-color: antiquewhite;
     text-align: center;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
   }
 }
