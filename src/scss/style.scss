@@ -1,0 +1,12 @@
+body {
+  font-size: 18px;
+  & .content {
+    width: 250px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    text-align: center;
+  }
+}
